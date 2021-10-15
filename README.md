@@ -34,6 +34,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+- I had trouble with initializing the Parse functionality. I did not have the allprojects{repository{}} area on my code.
+- I also had trouble implementing the File Provider. I assume my app did not use Androidx I believe, however, the old code for the File Provider did work for me after some deep research.
+- Due to time constraints, I was not able to design the layout of the MainActivity to be similar to instagram, however, I just placed a button for signing out of the app.
 
 ## Open-source libraries used
 
