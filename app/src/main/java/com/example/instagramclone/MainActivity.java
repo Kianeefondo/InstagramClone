@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSubmit;
     private File photoFile;
     public String photoFileName = "photo.jpg";
+    private Button btnSignout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
         ivPostImage = findViewById(R.id.ivPostImage);
         btnSubmit = findViewById(R.id.btnSubmit);
+        btnSignout = findViewById(R.id.btnSignOut);
+
+        btnSignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+                startActivity(new Intent(MainActivity.this, LoginActivity.class)); // shifts page back to login screen
+            }
+        });
+
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
