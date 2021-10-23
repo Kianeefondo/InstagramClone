@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -53,7 +54,6 @@ public class ComposeFragment extends Fragment {
     public String photoFileName = "photo.jpg";
 
     private Button btnSignout;
-
 
     public ComposeFragment() {
         // Required empty public constructor
